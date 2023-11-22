@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+  alert('Zadanie JSo3')
+  alert('Autor Hubert Ryszko 2Tp gr 2')
+  let a =Number(prompt("Podaj Liczbe a: "))
+
+  let b=Number(prompt("Podaj Liczbe b: "))
+
+  let c =Number(prompt("Podaj Liczbe c: "))
+
+  let d =Number(prompt("Podaj Liczbe d: "))
+
+  let e =Number(prompt("Podaj Liczbe e: "))
+
+  let f =Number(prompt("Podaj Liczbe f: "))
+
+    a = spr(a)
+    b = spr(b)
+    c = spr(c)
+    d = spr(d)
+    e = spr(e)
+    f = spr(f)
+
+    const aray = [a,b,c,d,e,f]
+    aray.sort((a,b)=>{return a-b})
+    document.write(aray)
+  function spr(x)
+  {
+    if(x>100 )
+    {
+        return 100;
+    }
+    else
+    {
+        if(x<0)
+        {
+            return 1;
+        }
+    }
+    return x;
+
+  }
+</script>
+<body>
+    
+</body>
+</html>

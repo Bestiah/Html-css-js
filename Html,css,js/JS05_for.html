@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sortowanie Liczb</title>
+</head>
+<body>
+    <script>
+        const liczby = [];
+
+        for (let i = 1; i <= 6; i++) {
+            let liczba = Number(prompt("Podaj Liczbę " + i));
+            liczby.push(liczba);
+        }
+
+        for (let i = 0; i < liczby.length ; i++) {
+            for (let j = 0; j < liczby.length - i - 1; j++) {
+                if (liczby[j] > liczby[j + 1]) {
+                    // Zamień liczby[j] i liczby[j + 1]
+                    let temp = liczby[j];
+                    liczby[j] = liczby[j + 1];
+                    liczby[j + 1] = temp;
+                }
+            }
+        }
+
+        document.write(liczby.join(" < "));
+        alert('Hubert Ryszko 2tp gr2');
+    </script>
+   
+</body>
+</html>

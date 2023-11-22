@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+     const liczby = [];
+let a = 1;
+do{
+    
+    a++;
+    let liczba = Number(prompt("Podaj Liczbę " + a));
+    liczby.push(liczba);
+}while( a <= 6); 
+let b = 0;let j = 0;
+do{ 
+    
+    b++;
+    do{  
+        
+        j++;
+        if (liczby[j] > liczby[j + 1]) {
+            let temp = liczby[j];
+            liczby[j] = liczby[j + 1];
+            liczby[j + 1] = temp;
+        }
+    }while( j < liczby.length - a - 1);
+}while( b < liczby.length  ); 
+
+document.write(liczby.join(" < "));
+alert('Hubert Ryszko 2tp gr2');
+
+
+
+</script>
+<body>
+    
+</body>
+</html>

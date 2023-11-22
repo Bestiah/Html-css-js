@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: monospace;
+            margin: 200px;
+            background-color: aliceblue;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background: rgba(181, 184, 187, 0.219);
+            font-size: 18px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            margin: 10px;
+
+
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+    <form id="customerForm" onsubmit="validateForm(event)">
+      <label for="imie">Imię:</label>
+      <input type="text" id="imie" required>
+  
+      <label for="Nazwisko">Nazwisko:</label>
+      <input type="text" id="Nazwisko" required>
+  
+      <label for="dur">Data urodzenia:</label>
+      <input type="date" id="dur" required>
+  
+      <label for="miejsceur">Miejsce urodzenia:</label>
+      <input type="text" id="miejsceur" required>
+  
+      <label for="nrklient">Numer klienta:</label>
+      <input type="text" id="nrklient" required>
+  
+      <label for="phone">Telefon:</label>
+      <input type="tel" id="phone" required>
+  
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" required>
+  
+      <label for="ulica">Ulica:</label>
+      <input type="text" id="ulica" required>
+  
+      <label for="nrdomu">Numer domu:</label>
+      <input type="text" id="nrdomu" required>
+  
+      <label for="nrmieszkania">Nr mieszkania:</label>
+      <input type="text" id="nrmieszkania">
+  
+      <label for="kodpocztowy">Kod pocztowy:</label>
+      <input type="text" id="kodpocztowy" required>
+  
+      <label for="Miejscowość">Miejscowość:</label>
+      <input type="text" id="Miejscowość" required>
+  
+      <div class="errorMessage" id="errorMessage"></div>
+  
+      <button type="submit">Wyślij</button>
+      <button type="button" onclick="resetForm()">Wyczyść</button>
+    </form>
+  
+    <script>
+      function validateForm(event) {
+        event.preventDefault();
+  
+        
+        var imie = document.getElementById('imie').value;
+        var Nazwisko = document.getElementById('Nazwisko').value;
+        var dur = document.getElementById('dur').value;
+        var miejsceur = document.getElementById('miejsceur').value;
+        var nrklient = document.getElementById('nrklient').value;
+        var phone = document.getElementById('phone').value;
+        var email = document.getElementById('email').value;
+        var ulica = document.getElementById('ulica').value;
+        var nrdomu = document.getElementById('nrdomu').value;
+        var nrmieszkania = document.getElementById('nrmieszkania').value;
+        var kodpocztowy = document.getElementById('kodpocztowy').value;
+        var Miejscowość = document.getElementById('Miejscowość').value;
+  
+        if (
+          imie === '' || Nazwisko === '' || dur === '' || miejsceur === '' ||
+          nrklient === '' || phone === '' || email === '' || ulica === '' ||
+          nrdomu === '' || kodpocztowy === '' || Miejscowość === ''
+        ) {
+          document.getElementById('errorMessage').innerText = 'Wypełnij wszystkie pola formularza.';
+        } else {
+          document.getElementById('errorMessage').innerText = '';
+  
+          alert('Pola zostały wypełnione poprawnie.\n\nDane wysłane:\n' +
+            'Imię: ' + imie +
+            '\nNazwisko: ' + Nazwisko +
+            '\nData urodzenia: ' + dur +
+            '\nMiejsce urodzenia: ' + miejsceur +
+            '\nNumer klienta: ' + nrklient +
+            '\nTelefon: ' + phone +
+            '\nE-mail: ' + email +
+            '\nUlica: ' + ulica +
+            '\nNumer domu: ' + nrdomu +
+            '\nNr mieszkania: ' + nrmieszkania +
+            '\nKod pocztowy: ' + kodpocztowy +
+            '\nMiejscowość: ' + Miejscowość);
+        }
+      }
+  
+      function resetForm() {
+        document.getElementById('customerForm').reset();
+        document.getElementById('errorMessage').innerText = '';
+      }
+    </script>
+  
+  </body>
+</html>

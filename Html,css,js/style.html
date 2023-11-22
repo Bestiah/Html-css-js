@@ -1,0 +1,103 @@
+<html>
+<head>
+</head>
+
+
+
+
+
+
+
+<body>
+
+<h1><p style="color:red; font-size: 20pt;">Do czego nam potrzebny serwer baz danych?</p></h1>
+<p>
+Serwery relacyjnych baz danych, takie jak MySQL (często nazywa się je systemami zarządzania 
+bazami danych):
+</p>
+<ol>
+<p>
+<li> <span style="color: green";font-weight:bold;">Bezpiecznie przechowują zbiory dowolnych danych</span> — bezpieczeństwo nie oznacza, że w 
+wyniku np. awarii dysku dane nie zostaną utracone, ale że wprowadzona do bazy informacja 
+będzie w niej zapisana, nawet jeżeli po zakończeniu operacji wystąpi jakaś awaria, np. serwer 
+będzie nagle wyłączony.
+</li>
+</p>
+<p>
+<li><span style="color: green";font-weight:bold;">Umożliwiają wielu klientom jednoczesne pobieranie i modyfikowanie 
+przechowywanych danych</span> — w tym samym czasie setki (tysiące) osób mogą odczytywać i 
+modyfikować dane.</li>
+</p>
+<p>
+<li><span style="color: green";font-weight:bold;">Umożliwiają klientom przetwarzanie danych za pomocą jakiejś wersji języka SQL</span> —
+języka utworzonego specjalnie w celu uproszczenia wyszukiwania, sortowania czy 
+modyfikowania danych.</li>
+</p>
+<p>
+<li><span style="color: green";font-weight:bold;">Umożliwiają kontrolowanie dostępu do danych</span> — administrator bazy danych może 
+nadawać i odbierać użytkownikom uprawnienia do wykonywania określonych operacji.
+</p></li>
+</ol>
+
+<p>
+To tylko kilka najważniejszych zadań — wiele współczesnych serwerów baz danych to bardzo 
+rozbudowane systemy, zintegrowane z jakimś środowiskiem programistycznym, uzupełnione 
+mechanizmami automatycznego raportowania, przetwarzania i analizowania danych, pozwalające 
+prawie całkowicie zautomatyzować typowe zadania administracyjne.
+</p>
+<p>
+Na podstawie tych najważniejszych cech serwerów baz danych można już odpowiedzieć na zadane 
+na początku pytanie: „Do czego nam potrzebny serwer baz danych?”.
+</p>
+
+<h2><p style="color: blue"; font-size: 18pt;">Korzyści płynące z używania serwerów baz danych</p></h2>
+
+<p>
+<span style="font-style:italic; font-weight:bold; color:red">Jedna z najważniejszych, ale bardzo często nieprzestrzeganych, dobrych zasad 
+programowania mówi, że zanim zaczyna się tworzyć program (np. aplikację WWW), 
+należy wybrać najlepszą do tego celu technologię. W ten sposób można zaoszczędzić 
+mnóstwo pracy, a i tak efekt będzie o wiele lepszy niż wtedy, gdy programista „na siłę” i „po 
+swojemu” próbuje uporać się z dawno rozwiązanym problem.</span>
+</p>
+
+<p>Dzięki serwerom baz danych:</p>
+<ol>
+<p>
+<li><span style="color:brown;"><b>Można udostępniać jednocześnie wielu osobom dostęp do danych </b></span>—
+Każdy, kto próbował kiedyś samodzielnie napisać program, który pozwoliłby współdzielić zapisane np. w 
+pliku dane, wie, że w ten sposób można oszczędzić sobie jakieś sześć miesięcy ciężkiej pracy.</li>
+</p>
+<p>
+<li><span style="color:brown;"><b>Wielokrotnie upraszcza się i przyspiesza operacje na danych, takie jak wyszukiwanie, 
+    sortowanie czy grupowanie</b></span>— listę produktów można posortować napisaną samodzielnie 
+funkcją, ale zdecydowanie prościej i lepiej jest skorzystać z optymalizowanego pod tym kątem 
+serwera baz danych.</li>
+</p>
+<p>
+<li><span style="color:brown;"><b>Oddziela się dane od aplikacji</b></span>— rozdzielnie poszczególnych zadań (przechowywania 
+danych, realizacji logiki aplikacji, pobierania i zwracania danych) i przypisywanie ich osobnym 
+komputerom jest podstawą od wielu lat królującej architektury wielowarstwowej. Programy 
+wielowarstwowe są o wiele lepiej skalowalne, łatwiejsze w zarządzaniu i bezpieczniejsze.</li>
+</p>
+<p>
+<li><span style="color:brown;"><b>Upraszcza się dynamiczne generowanie kodu aplikacji WWW</b></span>— HTML to język 
+znaczników, które po zinterpretowaniu przez przeglądarkę określają wygląd strony.<span style="font-style:italic">Jeżeli 
+zatem tekst strony (np. aktualności) jest zapisany w bazie, to wystarczy go odczytać, dodać 
+(często też zapisane w bazie) znaczniki i otrzymuje się dynamicznie wygenerowaną stronę 
+WWW</span>. W dodatku od teraz dodawanie czy zmienianie wiadomości na stronach nie wymaga 
+jakiejkolwiek znajomości HTML-a (bo sprowadza się do zapisania tekstu w bazie), czyli może 
+być przeprowadzone przez dowolną osobę.<span style="font-style:italic">A ponieważ PHP jest językiem 
+interpretowanym</span>(czyli interpreter na bieżąco odczytuje kod źródłowy programu, interpretuje i 
+wykonuje odczytane instrukcje),<span style="font-style:italic">to można w ten sam sposób zapisywać i odczytywać z bazy
+instrukcje PHP.</span>
+</li>
+</p>
+</ol>
+</body>
+
+
+
+
+
+
+</html>

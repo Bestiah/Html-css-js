@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'montserrat',Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+nav{
+    width: 100vw;
+    height: 50px;
+    background-color: rgb(0, 0, 0);
+    display: flex;  
+    align-items: center;  
+    justify-content: space-around;
+}
+
+li{
+    display: inline-block;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+li a{
+    text-decoration: none;
+    color: white;
+    padding: 3px;
+    transition: all .25s;
+}
+
+li a:hover{
+    color: rgb(255, 0, 0);
+    
+    
+}
+
+li a:active{
+    color: rgb(255, 0, 0);
+    border: 5px soild rgb(0, 0, 0);
+}

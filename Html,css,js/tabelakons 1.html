@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+const tabela = [];
+
+for (let i = 0; i < 5; i++) {
+    const wiersz = [];
+    for (let j = 0; j < 6; j++) {
+        let liczba = Number(prompt(`Podaj Liczbę w wierszu ${i + 1}, kolumnie ${j + 1}`));
+        wiersz.push(liczba);
+    }
+    tabela.push(wiersz);
+}
+
+for (let i = 0; i < tabela.length; i++) {
+    tabela[i].sort(function(a, b) {
+        return a - b;
+    });
+}
+
+for (let i = 0; i < tabela.length; i++) {
+    console.log(tabela[i].join(" > "));
+}
+
+alert('Hubert Ryszko 2tp gr2');
+
+
+</script>
+<body>
+    
+</body>
+</html>

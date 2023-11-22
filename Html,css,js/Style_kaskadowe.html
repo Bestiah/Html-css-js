@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <style type="text/css">
+            p{
+
+                
+            }
+            body{
+                font-family: Arial;
+            }
+            H1{
+                font-family: Arial;font-size: 21pt;
+            }
+            H2{
+                font-family: Arial;font-size: 18pt;
+            }
+            H3{
+                font-family: Arial;font-size: 16pt;
+            }
+            ul{
+                font-family: 'Courier New' ;background-color:lightgray ;
+            }
+            nw{font-family: 'Courier New' ;background-color:lightpink ; color: red;}
+            .tab{
+                 background-color:#D4D9DB;
+                 color: black;
+                 border: 2px solid gray;
+                 margin: 20px;
+                 padding: 0px;
+}
+        </style>
+    </head>
+    <body>
+        <h1>METODY PODPIĘCIA ARKUSZA CSS DO PLIKU HTML</h1>
+<p>MIROSŁAW ZELENT</p>
+<p>Istnieją trzy główne sposoby zainkludowania zapisów CSS do dokumentu HTML. W związku z tym istnieje także hierarchia 
+ważności stylów. W przypadku powtarzających się selektorów to miejsce podpięcia zdecyduje o tym, który styl obowiązuje - zasada 
+ogólna jest taka, iż to najpóźniej zdefiniowany w kodzie styl jest uważany za obowiązujący, gdyż "przesłania" poprzednie zapisy. 
+Ale po kolei - najpierw poznajmy trzy sposoby inkludowania stylów.</p>
+<H2>1. Zewnętrzny arkusz CSS (osobny plik)</H2>
+<p>Zewnętrzny arkusz CSS dołączamy do dokumentu HTML znacznikiem znajdującym się w sekcji <nw>&lt;head&gt;</nw> podstrony (wartość 
+atrybutu <nw>&lt;href&gt;</nw> musi wskazywać rzeczywisty, istniejący plik):</p>
+<div class="tab">
+&lt<span style= color:blue>link</span>  rel=<span style= color:red>"stylesheet"</span> href=<span style= color:red>"arkusz.css"&gt;</span>
+</div>
+<p>To zdecydowanie najpopularniejszy sposób dołączania stylów CSS do dokumentów HTML, gdyż jest wygodny i pozwala na 
+rozdzielenie treści witryny (tagów) od warstwy jej wyglądu (CSS). Oczywiście w tym miejscu nasz dociekliwy umysł zada sobie 
+pytanie: skąd wzięła się ta (dziwaczna na pozór) idea rozdzielenia zawartości witryny od jej wyglądu?</p><p>
+Otóż ma to duży sens praktyczny – odczujemy to na przykład w momencie, gdy jednym wpisem w arkuszu CSS uda nam się 
+zmienić kolor wszystkich przycisków w witrynie. Stało się to możliwe, gdyż wszystkie podstrony w serwisie używały tego samego 
+arkusza stylów, podpiętego do każdej z nich. To potężny i genialny w swojej prostocie mechanizm, naturalna ewolucja od czasów
+gdy wygląd określało się w HTML, na przykład z wielokrotnym użyciem tagów <nw>&lt;Font&gt;</nw>. Na szczęście te czasy bezpowrotnie minęły!</p>
+<h2> 2. Znaczniki &lt;Style&gt; w sekcji head </h2>
+<p> CSS można osadzić pomiędzy tagami <nw>&lt;style&gt;&lt;style&gt;</nw>, koniecznie umieszczonymi wewnątrz sekcji <nw>&lt;head&gt;</nw>:</p>
+<div class="tab">
+<span style= color:blue>&ltstyle&gt</span><br><br>
+ <span style= color:red; padding-left:15px>#container</span><br><br>
+ <span style= padding-left:15px>{</span><br>
+ <span style= padding-left:25px;color:blue>color:</span> red;<br>
+  <span style= padding-left:15px>{</span><br>
+<span style= color:blue>&ltstyle&gt</span><br>
+</div>
+<p>Jeśli już stosujemy tagi <nw>&lt;style&gt;&lt;style&gt;</nw> to zazwyczaj w celu przesłonięcia w tym konkretnym dokumencie wybranych stylów z 
+arkusza zewnętrznego (lub ewentualnie chcemy dodać style, których tam zabrakło).</p>
+<H2> 3. Style inline (wewnątrz atrybutu znacznika)</H2>
+<p>Stylizowanie inline (ang. w linii), oznacza zapisanie CSS jako wartości atrybutu <nw>style</nw> wybranego tagu HTML, znajdującego się w 
+sekcji <nw>&lt;body&gt;</nw> :</p>
+<div class="tab">
+<span style= color:blue>&ltdiv</span> id=<span style= color:red>"container"</span> style=<span style= color:red>"color:blue;"</span>"color:blue;"&gt <br>
+ <span style= padding-left:15px>Uczę się CSS!</span><br>
+<span style= color:blue>&lt/div&gt</span>
+</div>
+
+<p> stylizowanie stosujemy tylko doraźnie (w razie potrzeby), gdyż słabo rozdzielamy tutaj treść witryny od jej wyglądu (kod CSS 
+został "wmieszany" w tag HTML).</p>
+<h3>Hierarchia ważności metod</h3>
+Hierarchia ważności poszczególnych sposobów to: 3 > 2 > 1. Style inline przesłaniają te spomiędzy tagów <nw>&lt;body&gt;</nw>, zaś one 
+przesłaniają właściwości zdefiniowane w zewnętrznym arkuszu (o ile podpięcie pliku tagiem <nw>&lt;link&gt;</nw> znalazło się przed tagami
+<nw>&lt;style&gt;</nw>). Jest to logiczne - style inline występują węwnątrz tagów, stąd siłą rzeczy zawsze znajdą się poniżej sekcji <nw>&lt;head&gt;</nw> (tagi 
+"siedzą" przecież w <nw>&lt;body&gt;</nw>). I dlatego style inline są najważniejsze w hierarchii - występują najpóźniej, a więc obowiązują.</p>
+<h3>Złamanie hierarchii</h3>
+<p>Uwaga - możemy wymusić obowiązywanie jakiegoś stylu, niejako "wyjąć" jakąś właściwość CSS z tej kaskady i powiedzieć: "ta jest 
+najważniejsza!". Dokonujemy tego stosując po spacji (a przed średnikiem) klauzulę <nw>!important</nw> (ang. ważny):</p>
+
+<div class="tab">
+ <span style= color:red; padding-left:15px>#container</span><br><br>
+ <span style= padding-left:15px>{</span><br>
+ <span style= padding-left:25px;color:blue>color:</span>red<span>  !important; /* wymuszenie koloru czerwonego */</span><br>
+ <br> <span style= padding-left:15px>{</span><br>
+</div>
+
+Zwróćmy uwagę: teraz przeglądarka powie sobie: "Aha! Mam pominąć naturalną hierarchię i to ma być czerwone, choćby nie wiem 
+co!". Oczywiście żeby uniknąć nawarstwiania się chaosu, nie należy przesadzać z wyróżnianiem niektórych właściwości. Czasem 
+się to przydaje, jednak należy zachować umiar!
+    </body>
+
+</html>

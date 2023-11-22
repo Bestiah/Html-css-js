@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wulkany</title>
+  <style>
+    body {
+      text-align: center;
+    }
+
+    #slaid {
+      position: relative;
+      max-width: 800px;
+      margin: 20px auto;
+      overflow: hidden;
+    }
+
+    #slaidimg {
+      width: 100%;
+      height: auto;
+    }
+
+    #slidetytul {
+      font-size: 25px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="slidetytul">Wulkany</h1>
+
+  <div id="slaid">
+    <img id="slaidimg" src="wulkan1.jpg" alt="">
+  </div>
+
+  <script>
+    window.onload = function() {
+      
+      const zdjecia = [
+        'wulkan1.jpg',
+        'wulkan2.jpg',
+        'wulkan3.jpg',
+        'wulkan4.jpg',
+        'wulkan5.jpg',
+        'wulkan6.jpg'
+      ];
+
+      let licznik = 0;
+      const slideimg = document.getElementById('slaidimg');
+      const slidetytul = document.getElementById('slidetytul');
+
+      function zmianaimg() {
+        slideimg.src = zdjecia[licznik];
+        slidetytul.textContent = "Wulkan " + (licznik + 1);
+
+        
+        licznik = (licznik + 1) % zdjecia.length;
+
+        
+        setTimeout(zmianaimg, 3000);
+      }
+
+      
+      zmianaimg();
+    };
+  </script>
+
+</body>
+</html>

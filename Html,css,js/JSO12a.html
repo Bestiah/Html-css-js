@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+.body
+{
+    background-color: grey;
+}
+
+</style>
+<script>
+    
+    document.write('zadanie1')
+    document.write("<br>")
+    document.write('wysokosc okna : ')
+    document.write("<br>")
+    document.write(window.innerHeight)
+    document.write("<br>")
+    document.write('szerokosc okna :')
+    document.write("<br>")
+    document.write(window.innerWidth)
+    document.write("<br>")
+document.write('zadanie2')
+    function przycisk() {
+        window.setTimeout(function() {alert('Twój czas minął. Czy chcesz ponownie odliczać czas?');}, 10000);
+        }
+
+
+
+
+
+ 
+
+
+</script>
+<body>
+    <br><br>
+    licznik 10s
+    <br>
+    <button>
+        <div id="licznik" onclick="przycisk()">odliczaj</div>
+    </button>
+    <br>
+</body>
+<script>
+const kodprzegladarki = navigator.appCodeName;
+const nazwaprzeglądarki = navigator.appName;
+const ciasteczka = navigator.cookieEnabled;
+const procesory = navigator.platform;
+const jezyk = navigator.language;
+const os = navigator.oscpu;
+
+// Nazwa i wersja produktowa przeglądarki
+const wersja = navigator.product;
+
+// Język systemu operacyjnego
+const jezykop = navigator.systemLanguage || navigator.userLanguage;
+
+// Język użytkownika
+const jezykurz = navigator.language;
+
+document.write("<br>")
+document.write('zadanie3')
+document.write("<br>")
+document.write('Nazwa kodowa przeglądarki: ' + kodprzegladarki);
+document.write("<br>")
+document.write('Oficjalna nazwa przeglądarki: ' + nazwaprzeglądarki);
+document.write("<br>")
+document.write('Obsługa ciasteczek (cookies) włączona: ' + ciasteczka);
+document.write("<br>")
+document.write('Rodzina procesorów: ' + procesory);
+document.write("<br>")
+document.write('Kod języka: ' + jezyk);
+document.write("<br>")
+document.write("System operacyjny: " + os);
+document.write("<br>")
+document.write("Nazwa i wersja produktowa przeglądarki: " + wersja);
+document.write("<br>")
+document.write("Język systemu operacyjnego: " + jezykop);
+document.write("<br>")
+document.write("Język użytkownika: " + jezykurz);
+
+
+
+document.write("<br>")
+document.write("<br>")
+document.write('zadanie4')
+document.write("<br>")
+document.write("<br>")
+document.write('zadanie5')
+document.write("<br>")
+document.write(document.URL)
+document.write("<br>")
+
+</script>
+<body>
+
+
+
+
+
+
+
+
+</body>
+</html>

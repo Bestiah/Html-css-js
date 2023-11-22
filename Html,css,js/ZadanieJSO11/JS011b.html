@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function zamienNaPowiat() {
+      var paragraf = document.getElementById("mojaMiejscowosc");
+      var miejscowosc = paragraf.textContent;
+      var powiat = "ZachodnioPomorskie";
+      paragraf.textContent = powiat;
+    }
+
+    function wyswietlKomunikat() {
+      var paragraf = document.getElementById("mojaMiejscowosc");
+      alert(paragraf.textContent);
+    }
+  </script>
+<body>
+    <p id="mojaMiejscowosc" ondblclick="zamienNaPowiat()" onmouseover="wyswietlKomunikat()">Szczecin</p>
+</body>
+</html>
